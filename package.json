@@ -12,6 +12,7 @@
   "dependencies": {
     "@wormhole-foundation/wormhole-query-sdk": "^0.0.14",
     "axios": "^1.13.1",
+    "dotenv": "^17.2.3",
     "web3": "^4.16.0"
   },
   "devDependencies": {

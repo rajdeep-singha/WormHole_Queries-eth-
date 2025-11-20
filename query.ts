@@ -7,10 +7,11 @@ import{
 } from '@wormhole-foundation/wormhole-query-sdk';
 import axios from 'axios';
 import * as eth from 'web3';
-
+import 'dotenv/config';
+// goal is to extract the name of an ERC20 token (USDC) on Sepolia testnet using Wormhole Query Proxy
 // Defining the endpoint and query parameters
 const query_url = 'https://testnet.query.wormhole.com/v1/query';
-const rpc = 'https://testnet.query.wormhole.com/v1/query';
+const rpc = 'https://ethereum-sepolia-rpc.publicnode.com';
 const chain_id = 10002; // Sepolia (Wormhole Chain ID)
 const token = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238'; // USDC
 const data = '0x06fdde03'; // function selector for name()
@@ -57,7 +58,11 @@ const name = eth.eth.abi.decodeParameter('string',chainResponse.results[0]);
 console.log('\n\nParsed chain response:');
   console.log(chainResponse);
   console.log('\nToken name:', name);
-})
+})() 
+
+
+
+
 
 
 

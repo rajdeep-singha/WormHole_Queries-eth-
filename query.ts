@@ -60,7 +60,7 @@ console.log('\n\nParsed chain response:');
   console.log('\nToken name:', name);
 })() 
 
-// End of the script 
+// End of the script here
 
 
 
